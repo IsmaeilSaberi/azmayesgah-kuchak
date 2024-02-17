@@ -4,9 +4,7 @@ import { MdOutlineDashboard } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
 import RulesCtrl from "../rules-ctrl";
 import CommonRules from "../forms/Introduction";
-import CommentRules from "../forms/comment-rules";
-import QuestionRules from "../forms/question-rules";
-import ShoppingRules from "../forms/shopping-rules";
+import ExperimentsRules from "../forms/experiments-rules";
 
 const MainRules = () => {
   const [contentChanger, setContentChanger] = useState("Introduce");
@@ -20,12 +18,8 @@ const MainRules = () => {
   };
 
   useEffect(() => {
-    if (contentChanger == "comment") {
-      setDetails(<CommentRules />);
-    } else if (contentChanger == "faq") {
-      setDetails(<QuestionRules />);
-    } else if (contentChanger == "shopping") {
-      setDetails(<ShoppingRules />);
+    if (contentChanger == "experiment") {
+      setDetails(<ExperimentsRules />);
     } else {
       setDetails(<CommonRules />);
     }

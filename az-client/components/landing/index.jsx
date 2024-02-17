@@ -21,7 +21,7 @@ const LandingPage = () => {
             />
           </div>
           <div className="flex flex-col justify-evenly gap-4">
-            <div className="flex flex-col justify-start items-center gap-2">
+            <div className="flex flex-col justify-start items-center text-justify gap-2">
               <p className="text-lg">
                 همه مون توی مدرسه مواقعی رو داشتیم که توی خیلی از درسهای عملی و
                 آزمایشگاهی به دلیل نبودن فضای آزمایشگاهی مناسب از خیلی از مطالب
@@ -38,14 +38,14 @@ const LandingPage = () => {
                 آزمایشگاه کوچک من رو راه اندازی کردیم.
               </p>
             </div>
-            <div className="flex flex-col md:flex-row justify-end items-center gap-1 p-2 m-4">
+            <div className="flex flex-col md:flex-row text-justify justify-end items-center gap-4 p-1 m-2">
               <p className="text-lg font-bold">
                 اگر شما هم دنبال دیدن و تجربه ی آزمایش های با حال از درس ها مون
                 و منابع دیگه هستی از اینجا می تونی سفرت رو با ما شروع کنی.
               </p>
               <Link
                 href={"/login"}
-                className="bg-[#7900FF] hover:bg-[#FFB000] text-white font-bold py-2 px-4 rounded-full"
+                className="bg-[#7900FF] hover:bg-[#CFFFDC] border-2 hover:border-[#7900FF] hover:text-[#7900FF] text-white font-bold py-2 px-4 rounded-full"
               >
                 شروع
               </Link>

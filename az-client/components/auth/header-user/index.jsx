@@ -18,7 +18,7 @@ const HeaderUser = ({ displayName, setMenuIsOpen }) => {
   return (
     <div
       onMouseLeave={() => setIsOpen(false)}
-      className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6]"
+      className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#CFFFDC]"
     >
       {displayName == "" || displayName == undefined ? (
         <div className="md:text-md flex h-7 justify-center items-center gap-2">
@@ -39,7 +39,7 @@ const HeaderUser = ({ displayName, setMenuIsOpen }) => {
           </Link>
         </div>
       ) : (
-        <div className="md:text-sm h-7 flex justify-center items-center gap-1">
+        <div className="md:text-sm h-7 flex justify-center items-center gap-1 hover:text-[#7900FF]">
           <Image
             className="rounded-full"
             src={"/avatar.jpg"}
@@ -52,7 +52,7 @@ const HeaderUser = ({ displayName, setMenuIsOpen }) => {
             className="flex cursor-pointer transition-all duration-200  gap-1 items-center"
           >
             <div className="text-xs"> صفحه شخصی </div>
-            <div className="text-xs text-[#FFB000]">
+            <div className="text-xs font-bold text-[#93FFD8]">
               {replaceUnderscoresWithSpaces(displayName)}
             </div>
           </Link>

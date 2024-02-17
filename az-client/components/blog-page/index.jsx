@@ -34,7 +34,7 @@ const BlogPageComp = ({ url }) => {
   useEffect(() => {
     axios
       .get(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/search-posts?${pgn}${pn}${keyword}`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/post/search-posts?${pgn}${pn}${keyword}`
       )
       .then((d) => {
         setResult(d.data.allPosts);
@@ -45,11 +45,11 @@ const BlogPageComp = ({ url }) => {
   }, [pn, keyword]);
 
   return (
-    <div className="flex flex-col m-2 rounded gap-8 border-[0.1rem] border-[#23b17d]">
+    <div className="flex flex-col m-2 rounded gap-8 border-[0.1rem] border-[#7900FF]">
       <section className="flex justify-center md:justify-between items-center gap-8 my-8 mx-2 flex-wrap">
         <div className="flex justify-center md:justify-start items-center gap-4">
           <h1 className="text-center text-base md:text-xl text-indigo-600">
-            وبلاگ فروشگاه مدرسه اکسل
+            وبلاگ آزمایشگاه کوچک من
           </h1>
           <div className="w-20 flex justify-center items-center text-center h-8 rounded text-base sm:text-sm border-2 border-indigo-500">
             {searchedPostsNumber} مقاله

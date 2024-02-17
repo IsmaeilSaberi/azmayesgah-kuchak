@@ -47,9 +47,9 @@ const DropdownMenu = ({ isOpen, setIsOpen, setMenuIsOpen }) => {
         {isOpen && (
           <div
             onMouseLeave={() => toggleMenu()}
-            className="absolute w-36 z-50 top-5 -left-40 md:-left-2 rounded shadow-lg bg-white"
+            className="absolute w-36 z-50 text-[#7900FF] top-5 -left-32 md:-left-2 rounded-lg shadow-lg bg-[#548CFF]"
           >
-            <div className="block p-1 text-sm hover:bg-gray-100">
+            <div className="block p-1 text-sm">
               <ul className="flex flex-col gap-1">
                 <li
                   onClick={() => {
@@ -57,23 +57,13 @@ const DropdownMenu = ({ isOpen, setIsOpen, setMenuIsOpen }) => {
                     setIsOpen(false);
                     setMenuIsOpen(-1);
                   }}
-                  className="rounded flex justify-center items-center cursor-pointer transition-all duration-200 hover:bg-indigo-200 text-sm h-8 bg-indigo-100"
+                  className="rounded flex justify-center items-center cursor-pointer transition-all duration-200 hover:bg-[#93FFD8] text-sm h-8 bg-indigo-100"
                 >
-                  اطلاعات
-                </li>
-                <li
-                  onClick={() => {
-                    router.push("/account/comments");
-                    setIsOpen(false);
-                    setMenuIsOpen(-1);
-                  }}
-                  className="rounded flex justify-center items-center cursor-pointer transition-all duration-200 hover:bg-indigo-200 text-sm h-8 bg-indigo-100"
-                >
-                  دیدگاهها
+                  اطلاعات کاربری
                 </li>
                 <li
                   onClick={logouter}
-                  className="rounded flex justify-center items-center cursor-pointer transition-all duration-200 hover:bg-indigo-200 text-sm h-8 bg-indigo-100"
+                  className="rounded flex justify-center items-center cursor-pointer transition-all duration-200 hover:bg-[#93FFD8] text-sm h-8 bg-indigo-100"
                 >
                   خروج
                 </li>

@@ -56,7 +56,7 @@ const Header = () => {
                 </li>
                 <li className="rounded-full  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
                   <Link
-                    className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6] "
+                    className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#CFFFDC] hover:text-[#7900FF] "
                     href={"/"}
                     onClick={() => setMenuIsOpen(-1)}
                   >
@@ -65,29 +65,38 @@ const Header = () => {
                 </li>
                 <li className="rounded-full  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
                   <Link
-                    className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6] "
-                    href={"/account/healthparameters"}
+                    className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#CFFFDC] hover:text-[#7900FF] "
+                    href={"/experiments"}
                     onClick={() => setMenuIsOpen(-1)}
                   >
-                    آزمایش های من
+                    آزمایش ها
                   </Link>
                 </li>
                 <li className="rounded-full  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
                   <Link
-                    className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6] "
-                    href={"/healthcharts"}
-                    onClick={() => setMenuIsOpen(-1)}
-                  >
-                    آزمایش های آینده
-                  </Link>
-                </li>
-                <li className="rounded-full  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
-                  <Link
-                    className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6] "
+                    className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#CFFFDC] hover:text-[#7900FF] "
                     href={"/blog"}
                     onClick={() => setMenuIsOpen(-1)}
                   >
                     مقالات
+                  </Link>
+                </li>
+                <li className="rounded-full  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
+                  <Link
+                    className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#CFFFDC] hover:text-[#7900FF] "
+                    href={"/about"}
+                    onClick={() => setMenuIsOpen(-1)}
+                  >
+                    درباره ما
+                  </Link>
+                </li>
+                <li className="rounded-full  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
+                  <Link
+                    className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#CFFFDC] hover:text-[#7900FF] "
+                    href={"/rules"}
+                    onClick={() => setMenuIsOpen(-1)}
+                  >
+                    قوانین
                   </Link>
                 </li>
               </ul>

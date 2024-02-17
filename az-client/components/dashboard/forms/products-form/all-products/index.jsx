@@ -107,7 +107,7 @@ const AllProducts = ({ setProductDetailCtrl, setRandNumForProductClick }) => {
             }}
             className={
               categoryUrl == "products"
-                ? "bg-orange-300 rounded border-2 text-sm md:text-md py-2 px-2 border-black transition-all duration-200 hover:bg-[#b17d23]"
+                ? "bg-orange-300 rounded border-2 text-sm md:text-md py-2 px-2 border-black transition-all duration-200 hover:bg-[#548CFF]"
                 : "bg-yellow-300 rounded border-2 text-sm md:text-md py-2 px-2 border-black transition-all duration-200 hover:bg-yellow-400"
             }
           >
@@ -125,7 +125,7 @@ const AllProducts = ({ setProductDetailCtrl, setRandNumForProductClick }) => {
               }}
               className={
                 categoryUrl == `get-products-of-type/${cate._id}`
-                  ? "bg-orange-300 rounded border-2 text-sm md:text-md py-2 px-2 border-black transition-all duration-200 hover:bg-[#b17d23]"
+                  ? "bg-orange-300 rounded border-2 text-sm md:text-md py-2 px-2 border-black transition-all duration-200 hover:bg-[#548CFF]"
                   : "bg-yellow-300 rounded border-2 text-sm md:text-md py-2 px-2 border-black transition-all duration-200 hover:bg-yellow-400"
               }
             >
@@ -172,8 +172,8 @@ const AllProducts = ({ setProductDetailCtrl, setRandNumForProductClick }) => {
             <button
               className={
                 n + 1 == pageNumber
-                  ? "rounded-full w-8 h-8 bg-[#b17d23] text-white flex justify-center items-center transition-all duration-300 hover:bg-[#b17d23]"
-                  : "rounded-full w-8 h-8 bg-[#2357b1] text-white flex justify-center items-center transition-all duration-300 hover:bg-[#b17d23]"
+                  ? "rounded-full w-8 h-8 bg-[#548CFF] text-white flex justify-center items-center transition-all duration-300 hover:bg-[#548CFF]"
+                  : "rounded-full w-8 h-8 bg-[#2357b1] text-white flex justify-center items-center transition-all duration-300 hover:bg-[#548CFF]"
               }
               onClick={() => {
                 n + 1 == pageNumber ? console.log("") : setProducts([-1]);

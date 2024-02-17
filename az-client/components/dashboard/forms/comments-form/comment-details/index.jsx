@@ -294,7 +294,7 @@ const CommentDetails = ({ commentId }) => {
                     <div className="bg-[#e5fcde] rounded px-2 py-1">
                       {fullData.parent.email}
                     </div>
-                    <div className="bg-[#b17d23] text-white rounded px-2 py-1">
+                    <div className="bg-[#548CFF] text-white rounded px-2 py-1">
                       {fullData.parent.createdAt}
                     </div>
                   </div>
@@ -317,7 +317,7 @@ const CommentDetails = ({ commentId }) => {
             </div>
             <button
               type="submit"
-              className="bg-[#2357b1] p-2 w-full rounded text-white transition-all duration-200 hover:bg-[#b17d23]"
+              className="bg-[#2357b1] p-2 w-full rounded text-white transition-all duration-200 hover:bg-[#548CFF]"
             >
               بروز رسانی
             </button>

@@ -1,9 +1,9 @@
 import MainRules from "@/components/rules-component/rules-main";
 
 export const metadata = {
-  metadataBase: new URL("http://mdxl.ir/"),
+  metadataBase: new URL("http://azekuchak.ir/"),
   title: "قوانین",
-  description: "قوانین فروشگاه مدرسه اکسل",
+  description: "قوانین آزمایشگاه کوچک من",
   alternates: {
     canonical: "/rules",
     languages: {

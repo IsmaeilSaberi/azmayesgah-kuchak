@@ -34,13 +34,13 @@ const SliderMain = () => {
                 />
               )
             }
-            className="flex justify-center items-center w-32 h-10 rounded bg-[#2357b1] text-white transition-all duration-200 hover:bg-[#b17d23]"
+            className="flex justify-center items-center w-32 h-10 rounded bg-[#2357b1] text-white transition-all duration-200 hover:bg-[#548CFF]"
           >
             همه
           </button>
           <button
             onClick={() => setDetails(<NewSlider />)}
-            className="flex justify-center items-center w-32 h-10 rounded bg-[#2357b1] text-white transition-all duration-200 hover:bg-[#b17d23]"
+            className="flex justify-center items-center w-32 h-10 rounded bg-[#2357b1] text-white transition-all duration-200 hover:bg-[#548CFF]"
           >
             اسلایدر جدید
           </button>

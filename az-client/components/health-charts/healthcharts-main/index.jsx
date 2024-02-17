@@ -169,8 +169,8 @@ const HealthChartsMainComponent = ({ items }) => {
         <div
           className={
             menuIsOpen == -1
-              ? "z-50 md:z-40 w-full md:w-72 bg-gray-600 md:bg-[#FFCF9D] p-6 rounded-none md:rounded md:bg-transparent fixed md:sticky md:top-8 md:right-0 md:bottom-8 h-auto py-2 md:py-4 md:px-2 top-0 bottom-0 left-[100%] md:left-0 -right-[100%] transition-all duration-500"
-              : "z-50 md:z-40 w-full md:w-72 backdrop-blur-3xl md:bg-[#FFCF9D] p-6 rounded-none md:rounded md:bg-transparent h-[100vh] py-1 md:px-2 fixed top-0 bottom-0 right-0 left-0 md:absolute transition-all duration-500"
+              ? "z-50 md:z-40 w-full md:w-72 bg-gray-600 md:bg-[#CFFFDC] p-6 rounded-none md:rounded md:bg-transparent fixed md:sticky md:top-8 md:right-0 md:bottom-8 h-auto py-2 md:py-4 md:px-2 top-0 bottom-0 left-[100%] md:left-0 -right-[100%] transition-all duration-500"
+              : "z-50 md:z-40 w-full md:w-72 backdrop-blur-3xl md:bg-[#CFFFDC] p-6 rounded-none md:rounded md:bg-transparent h-[100vh] py-1 md:px-2 fixed top-0 bottom-0 right-0 left-0 md:absolute transition-all duration-500"
           }
         >
           <nav className="flex justify-center items-center mt-12 md:mt-0 ">
@@ -184,7 +184,7 @@ const HealthChartsMainComponent = ({ items }) => {
                   className={
                     items.slug[0] == "bmi"
                       ? "rounded text-white bg-[#7900FF] transition-none duration-200 hover:bg-indigo-300 hover:text-white flex justify-center items-center w-full h-12"
-                      : "rounded text-white bg-[#FFB000] transition-none duration-200 hover:bg-indigo-300 hover:text-white flex justify-center items-center w-full h-12"
+                      : "rounded text-white bg-[#548CFF] transition-none duration-200 hover:bg-indigo-300 hover:text-white flex justify-center items-center w-full h-12"
                   }
                   href={"/healthcharts/bmi"}
                 >
@@ -200,7 +200,7 @@ const HealthChartsMainComponent = ({ items }) => {
                   className={
                     items.slug[0] == "bmr"
                       ? "rounded text-white bg-[#7900FF] transition-none duration-200 hover:bg-indigo-300 hover:text-white flex justify-center items-center w-full h-12"
-                      : "rounded text-white bg-[#FFB000] transition-none duration-200 hover:bg-indigo-300 hover:text-white flex justify-center items-center w-full h-12"
+                      : "rounded text-white bg-[#548CFF] transition-none duration-200 hover:bg-indigo-300 hover:text-white flex justify-center items-center w-full h-12"
                   }
                   href={"/healthcharts/bmr"}
                 >

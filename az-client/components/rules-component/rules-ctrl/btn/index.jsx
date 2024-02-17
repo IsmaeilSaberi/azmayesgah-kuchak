@@ -26,8 +26,8 @@ const DCBtn = ({
       }}
       className={
         colorChanger == content
-          ? "w-full md:w-36 h-8 md:h-10 text-base rounded flex justify-center items-center bg-[#23b17d] text-white border-[0.15rem] border-[#b13e57] transition-all duration-200 hover:bg-indigo-700"
-          : "w-full md:w-36 h-8 md:h-10 text-base rounded flex justify-center items-center bg-[#b17d23] text-white transition-all duration-200 hover:bg-[#23b17d]"
+          ? "w-full md:w-36 h-8 md:h-10 text-base rounded-full flex justify-center items-center bg-[#7900FF] text-white border-[0.15rem] border-[#b13e57] transition-all duration-200 hover:bg-indigo-700"
+          : "w-full md:w-36 h-8 md:h-10 text-base rounded-full flex justify-center items-center bg-[#548CFF] text-white transition-all duration-200 hover:bg-[#7900FF]"
       }
     >
       {title}

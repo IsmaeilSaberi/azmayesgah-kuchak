@@ -38,7 +38,7 @@ const Box = ({ data, setMiddleBannerDetailCtrl, setRandNumForBannerClick }) => {
             خاموش
           </div>
         )}
-        <div className="text-xs bg-[#b17d23] text-white px-2 py-1 rounded">
+        <div className="text-xs bg-[#548CFF] text-white px-2 py-1 rounded">
           {data.date}
         </div>
       </div>

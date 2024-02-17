@@ -33,7 +33,7 @@ const DynamicCategories = ({ data, setMenuIsOpen }) => {
               // router.push(`/shop?keyword=${escape(da.title)}`);
               // setMenuIsOpen(-1);
             }}
-            className="bg-[#b17d23] cursor-pointer text-white hover:text-[#b12357] border-purple-300 border-[0.1rem] h-9 rounded px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6]"
+            className="bg-[#548CFF] cursor-pointer text-white hover:text-[#b12357] border-purple-300 border-[0.1rem] h-9 rounded px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6]"
           >
             {da.title}
             <DynamicDropdown

@@ -38,10 +38,10 @@ const Box = ({ data, setSliderDetailCtrl, setRandNumForSliderClick }) => {
             خاموش
           </div>
         )}
-        <div className="text-xs bg-[#b17d23] text-white px-2 py-1 rounded">
+        <div className="text-xs bg-[#548CFF] text-white px-2 py-1 rounded">
           {data.date}
         </div>
-        <div className="text-xs bg-[#b17d23] text-white px-2 py-1 rounded">
+        <div className="text-xs bg-[#548CFF] text-white px-2 py-1 rounded">
           اسلایدر {data.sorter} ام
         </div>
       </div>

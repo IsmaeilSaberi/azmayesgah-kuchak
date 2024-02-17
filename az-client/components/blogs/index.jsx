@@ -17,14 +17,14 @@ const Blogs = async () => {
       {data.length < 1 ? (
         <div></div>
       ) : (
-        <section className="container border-[0.1rem] border-[#23b17d] rounded mx-auto m-2 flex flex-col gap-4">
+        <section className="container border-[0.1rem] border-[#7900FF] rounded mx-auto m-2 flex flex-col gap-4">
           <header className="m-2 flex justify-between items-center">
             <h2 className="text-[#b53057] text-md md:text-xl border-[#b53057] border-r-2 pr-2">
               جدیدترین مقالات
             </h2>
             <div className="flex gap-1 items-center">
               <Link
-                className="bg-[#b17d23] px-4 border-2 py-2 rounded transition-all duration-200 hover:bg-[#b1239b]"
+                className="bg-[#548CFF] px-4 border-2 py-2 rounded transition-all duration-200 hover:bg-[#b1239b]"
                 href={`/blog`}
               >
                 مشاهده ی همه

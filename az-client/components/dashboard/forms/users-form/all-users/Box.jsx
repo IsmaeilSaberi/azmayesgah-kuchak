@@ -22,7 +22,7 @@ const Box = ({ data, setUserDetailCtrl, setRandNumForUserClick }) => {
           <div className="">نام نمایشی: {data.displayname}</div>
           <div className="">ایمیل: {data.email}</div>
         </div>
-        <div className="text-xs absolute top-3 left-3 bg-[#b17d23] text-white px-2 py-1 rounded">
+        <div className="text-xs absolute top-3 left-3 bg-[#548CFF] text-white px-2 py-1 rounded">
           {data.createdAt}
         </div>
         <div className="text-xs absolute top-3 left-32 text-white rounded">

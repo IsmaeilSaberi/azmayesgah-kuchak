@@ -434,7 +434,7 @@ const PostDetails = ({ postId }) => {
             </div>
             <button
               type="submit"
-              className="bg-[#2357b1] p-2 w-full rounded text-white transition-all duration-200 hover:bg-[#b17d23]"
+              className="bg-[#2357b1] p-2 w-full rounded text-white transition-all duration-200 hover:bg-[#548CFF]"
             >
               بروز رسانی
             </button>

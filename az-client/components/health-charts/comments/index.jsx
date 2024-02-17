@@ -69,7 +69,7 @@ const Comments = ({ cookie }) => {
         ) : (
           <div className="flex flex-col gap-4">
             <div className="flex justify-end items-center w-full">
-              <div className="flex justify-center items-center bg-[#b17d23] text-white w-28 h-10 rounded">
+              <div className="flex justify-center items-center bg-[#548CFF] text-white w-28 h-10 rounded">
                 {data.length} دیدگاه
               </div>
             </div>
@@ -101,7 +101,7 @@ const Comments = ({ cookie }) => {
                               {da.src.title}
                             </Link>
                             <div className="flex justify-end items-center gap-4">
-                              <div className="bg-[#b17d23] text-white rounded-sm text-xs flex justify-center items-center w-28 h-6">
+                              <div className="bg-[#548CFF] text-white rounded-sm text-xs flex justify-center items-center w-28 h-6">
                                 {da.createdAt}
                               </div>
                               <div className="">

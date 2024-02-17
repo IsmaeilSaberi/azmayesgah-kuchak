@@ -9,7 +9,7 @@ const Page = () => {
         <link rel="canonical" href="http://localhost:3000/about" />
       </>
       <section className="container mx-auto flex justify-center items-center p-12">
-        <div className="px-8 py-4 rounded bg-[#b17d23] text-white">
+        <div className="px-8 py-4 rounded bg-[#548CFF] text-white">
           درباره ما
         </div>
       </section>

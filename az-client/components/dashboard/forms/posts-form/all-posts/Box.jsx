@@ -34,7 +34,7 @@ const Box = ({ data, setPostDetailCtrl, setRandNumForPostClick }) => {
           {data.updatedAt}
         </div>
         <div className="absolute bottom-3 left-3 flex justify-end items-center gap-2">
-          <div className="text-xs bg-[#b17d23] text-white w-24 h-6 flex items-center justify-center rounded">
+          <div className="text-xs bg-[#548CFF] text-white w-24 h-6 flex items-center justify-center rounded">
             {data.pageView} بازدید
           </div>
           {data.published == true ? (

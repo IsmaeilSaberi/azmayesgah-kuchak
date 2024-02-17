@@ -77,7 +77,7 @@ const LoginForm = () => {
             ورود به حساب
           </h1>
           <Link
-            className="bg-[#FFB000] rounded text-[#7900FF] px-2 py-1 transition-all duration-200 hover:bg-blue-700 hover:text-white"
+            className="bg-[#548CFF] rounded text-[#7900FF] px-2 py-1 transition-all duration-200 hover:bg-blue-700 hover:text-white"
             href={"/register"}
           >
             ثبت نام در سایت
@@ -136,7 +136,7 @@ const LoginForm = () => {
         </div>
         <button
           type="submit"
-          className="bg-[#7900FF] rounded p-2 text-white w-full transitioln-all duration-200 hover:bg-[#FFB000]"
+          className="bg-[#7900FF] rounded p-2 text-white w-full transitioln-all duration-200 hover:bg-[#548CFF]"
         >
           ورود به حساب کاربری
         </button>

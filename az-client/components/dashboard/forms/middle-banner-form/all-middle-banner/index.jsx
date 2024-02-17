@@ -114,8 +114,8 @@ const AllMiddleBanner = ({
             <button
               className={
                 n + 1 == pageNumber
-                  ? "rounded-full w-8 h-8 bg-[#b17d23] text-white flex justify-center items-center transition-all duration-300 hover:bg-[#b17d23]"
-                  : "rounded-full w-8 h-8 bg-[#2357b1] text-white flex justify-center items-center transition-all duration-300 hover:bg-[#b17d23]"
+                  ? "rounded-full w-8 h-8 bg-[#548CFF] text-white flex justify-center items-center transition-all duration-300 hover:bg-[#548CFF]"
+                  : "rounded-full w-8 h-8 bg-[#2357b1] text-white flex justify-center items-center transition-all duration-300 hover:bg-[#548CFF]"
               }
               onClick={() => {
                 n + 1 == pageNumber ? console.log("") : setBanners([-1]);

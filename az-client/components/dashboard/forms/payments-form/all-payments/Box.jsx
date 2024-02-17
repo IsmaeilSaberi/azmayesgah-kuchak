@@ -33,7 +33,7 @@ const Box = ({ data, setPaymentDetailCtrl, setRandNumForPaymentClick }) => {
       <div className="flex flex-col gap-4">
         <div className="">مبلغ : {priceChanger(data.amount / 10)} تومان</div>
         <div className="">ایمیل: {data.email}</div>
-        <div className="text-xs absolute top-3 left-3 bg-[#b17d23] text-white px-2 py-1 rounded">
+        <div className="text-xs absolute top-3 left-3 bg-[#548CFF] text-white px-2 py-1 rounded">
           {data.updatedAt}
         </div>
         <div className="text-xs absolute top-3 left-32 text-white rounded">

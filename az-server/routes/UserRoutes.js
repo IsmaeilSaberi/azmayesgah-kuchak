@@ -148,8 +148,6 @@ router.get(
   UserCtrl.getPartOfUserData
 );
 
-router.get("/uncheck-comment/:id", isAdmin, UserCtrl.uncheckComment);
-
 // FOR DASHBOARD DEFAULT PANNEL
 router.get("/get-new-items", isAdmin, UserCtrl.getNewItems);
 

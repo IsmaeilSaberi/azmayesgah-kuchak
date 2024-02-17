@@ -27,7 +27,7 @@ function LinearChart() {
           {
             data: [80, 85, 98, 100, 95, 75, 77],
             label: "weight",
-            borderColor: "#FFB000",
+            borderColor: "#548CFF",
             backgroundColor: "#F5F5DC",
             fill: false,
           },

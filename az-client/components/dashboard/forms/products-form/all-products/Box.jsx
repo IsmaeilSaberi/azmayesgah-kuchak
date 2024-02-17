@@ -57,7 +57,7 @@ const Box = ({ data, setProductDetailCtrl, setRandNumForProductClick }) => {
           </div>
         </div>
         <div className="absolute bottom-3 left-3 flex text-xs text-white justify-end items-center gap-2">
-          <div className="bg-[#b17d23]  w-24 h-6 flex items-center justify-center rounded">
+          <div className="bg-[#548CFF]  w-24 h-6 flex items-center justify-center rounded">
             {data.pageView} بازدید
           </div>
           {data.published == true ? (

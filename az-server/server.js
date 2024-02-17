@@ -26,20 +26,24 @@ app.use(cookieParser());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("Hello to Daily Nutrients API");
+  res.send("Hello to Aze Kuchak API");
 });
-
-// HD Router
-// const healthDetailRouter = require("./routes/healthDetail.js");
-// app.use("/HD", healthDetailRouter);
 
 // user Router
 const UserRoutes = require("./routes/UserRoutes.js");
 app.use("/user", UserRoutes);
 
-// diet Router
-const dietRouter = require("./routes/diet.js");
-app.use("/diet", dietRouter);
+// experiment Router
+const ExperimentRoutes = require("./routes/ExperimentRoutes.js");
+app.use("/experiment", ExperimentRoutes);
+
+// post Router
+const PostRoutes = require("./routes/PostRoutes.js");
+app.use("/post", PostRoutes);
+
+// rule Router
+const RuleRoutes = require("./routes/RuleRoutes.js");
+app.use("/rule", RuleRoutes);
 
 // connect to mongoDB
 const CONNECTION_URL = process.env.CONNECTION_URL;

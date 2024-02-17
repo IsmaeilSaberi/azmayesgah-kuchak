@@ -19,7 +19,7 @@ const Box = ({ data, setCommentDetailCtrl, setRandNumForCommentClick }) => {
     >
       <div className="flex w-full flex-col gap-4">
         <div className="m-2">ایمیل: {data.email}</div>
-        <div className="text-xs absolute top-3 left-3 bg-[#b17d23] text-white flex justify-center items-center w-28 h-6 rounded">
+        <div className="text-xs absolute top-3 left-3 bg-[#548CFF] text-white flex justify-center items-center w-28 h-6 rounded">
           {data.createdAt}
         </div>
         <div className="absolute top-3 left-32 flex justify-end items-center gap-2">

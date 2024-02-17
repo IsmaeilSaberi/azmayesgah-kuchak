@@ -1,5 +1,4 @@
 const User = require("../models/User");
-const Comment = require("../models/Comment");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -119,7 +118,6 @@ const registerUser = async (req, res) => {
                   minute: "2-digit",
                 }),
               },
-              comments: [],
               viewed: false,
               createdAt: new Date().toLocaleDateString("fa-IR", {
                 hour: "2-digit",
@@ -283,16 +281,6 @@ const getOneUserById = async (req, res) => {
       password: false,
     });
 
-    // FOR ADDING COMMENTS TO TARGET USER
-    const targetUserComments = await Comment.find({
-      email: targetUser.email,
-    }).select({
-      message: 1,
-      typeOfModel: 1,
-      createdAt: 1,
-    });
-    targetUser.comments = targetUserComments;
-
     res.status(200).json(targetUser);
   } catch (error) {
     console.log(error);
@@ -356,50 +344,6 @@ const getPartOfUserData = async (req, res) => {
         updatedAt: 1,
       });
       res.status(200).json(targetUser);
-    } else if (theSlug == "comments") {
-      const targetUser = await User.findById(req.user._id);
-      const userComments = await Comment.find({ email: targetUser.email })
-        .sort({ _id: -1 })
-        .select({
-          createdAt: 1,
-          published: 1,
-          typeOfModel: 1,
-          src_id: 1,
-          message: 1,
-        });
-
-      const fullDataUserComments = [];
-      // ADDING SOURCE POST OR PRODUCT TO COMMENT
-
-      for (let i = 0; i < userComments.length; i++) {
-        let theSrc = {};
-        if (userComments[i].typeOfModel == "post") {
-          const postSrc = await Post.findById(userComments[i].src_id).select({
-            title: 1,
-            slug: 1,
-          });
-          theSrc = postSrc;
-        } else {
-          const productSrc = await Product.findById(
-            userComments[i].src_id
-          ).select({
-            title: 1,
-            slug: 1,
-          });
-          theSrc = productSrc;
-        }
-        const newCommentData = {
-          createdAt: userComments[i].createdAt,
-          published: userComments[i].published,
-          typeOfModel: userComments[i].typeOfModel,
-          src_id: userComments[i].src_id,
-          message: userComments[i].message,
-          src: theSrc,
-        };
-        fullDataUserComments.push(newCommentData);
-      }
-
-      res.status(200).json(fullDataUserComments);
     } else {
       res.status(200).json({ msg: "عدم تعیین بخش مورد نیاز!" });
     }
@@ -455,29 +399,12 @@ const getDisplayname = async (req, res) => {
 };
 module.exports.getDisplayname = getDisplayname;
 
-const uncheckComment = async (req, res) => {
-  try {
-    const newCommentData = {
-      viewed: false,
-    };
-    await Comment.findByIdAndUpdate(req.params.id, newCommentData, {
-      new: true,
-    });
-    res.status(200).json({ msg: "دیدگاه به بخش دیدگاه های جدید افزوده شد!" });
-  } catch (error) {
-    res.status(400).json(error);
-  }
-};
-module.exports.uncheckComment = uncheckComment;
-
 const getNewItems = async (req, res) => {
   try {
     const newUsers = await User.find({ viewed: false });
 
-    const newComments = await Comment.find({ viewed: false });
     const sendingData = {
       newUsersNumber: newUsers.length,
-      newCommentsNumber: newComments.length,
     };
     res.status(200).json(sendingData);
   } catch (error) {

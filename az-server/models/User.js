@@ -25,11 +25,6 @@ const UserSchema = new mongoose.Schema({
     required: true,
     enum: ["Male", "Female"],
   },
-  comments: {
-    required: true,
-    type: Array,
-    default: [],
-  },
   age: {
     required: true,
     type: Number,

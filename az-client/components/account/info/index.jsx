@@ -142,31 +142,31 @@ const Info = ({ cookie }) => {
               </div>
             </div>
             <div className="flex flex-wrap gap-8 bg-[#e5fcde] w-full text-sm rounded p-4">
-              <div className="flex justify-start border-2 border-[#FFB000] p-1 rounded items-center gap-4">
+              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
                 <div>نام کاربری:</div>
                 <div>{data.username.replace(/_/g, " ")}</div>
               </div>
-              <div className="flex justify-start border-2 border-[#FFB000] p-1 rounded items-center gap-4">
+              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
                 <div>نام نمایشی:</div>
                 <div>{data.username.replace(/_/g, " ")}</div>
               </div>
-              <div className="flex justify-start border-2 border-[#FFB000] p-1 rounded items-center gap-4">
+              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
                 <div>آدرس ایمیل:</div>
                 <div>{data.email}</div>
               </div>
-              <div className="flex justify-start border-2 border-[#FFB000] p-1 rounded items-center gap-4">
+              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
                 <div>سن:</div>
                 <div>{data.age}</div>
               </div>
-              <div className="flex justify-start border-2 border-[#FFB000] p-1 rounded items-center gap-4">
+              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
                 <div>وزن:</div>
                 <div>{data.weightHistory[0].weight} کیلوگرم</div>
               </div>
-              <div className="flex justify-start border-2 border-[#FFB000] p-1 rounded items-center gap-4">
+              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
                 <div>قد:</div>
                 <div>{data.heightHistory[0].height} سانتی متر</div>
               </div>
-              <div className="flex justify-start border-2 border-[#FFB000] p-1 rounded items-center gap-4">
+              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
                 <div>جنسیت:</div>
                 <div>{data.gender == "Male" ? "آقا" : "خانم"}</div>
               </div>
@@ -259,7 +259,7 @@ const Info = ({ cookie }) => {
                 </div>
                 <button
                   type="submit"
-                  className="bg-[#7900FF] rounded p-2 text-white w-full transitioln-all duration-200 hover:bg-[#FFB000]"
+                  className="bg-[#7900FF] rounded p-2 text-white w-full transitioln-all duration-200 hover:bg-[#548CFF]"
                 >
                   بروز رسانی اطلاعات
                 </button>

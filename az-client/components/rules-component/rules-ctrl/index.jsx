@@ -16,24 +16,8 @@ const RulesCtrl = ({ setContentChanger, setMenuIsOpen }) => {
           setMenuIsOpen={setMenuIsOpen}
         />
         <DCBtn
-          title={" قوانین خرید"}
-          content={"shopping"}
-          setContentChanger={setContentChanger}
-          colorChanger={colorChanger}
-          setColorChanger={setColorChanger}
-          setMenuIsOpen={setMenuIsOpen}
-        />
-        <DCBtn
-          title={"قوانین دیدگاه"}
-          content={"comment"}
-          setContentChanger={setContentChanger}
-          colorChanger={colorChanger}
-          setColorChanger={setColorChanger}
-          setMenuIsOpen={setMenuIsOpen}
-        />
-        <DCBtn
-          title={" سوالات پرتکرار"}
-          content={"faq"}
+          title={" قوانین ثبت آزمایش"}
+          content={"experiments"}
           setContentChanger={setContentChanger}
           colorChanger={colorChanger}
           setColorChanger={setColorChanger}

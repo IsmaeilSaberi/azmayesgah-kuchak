@@ -10,7 +10,7 @@ const CommonRules = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/get-rule/intro`)
+      .get(`${process.env.NEXT_PUBLIC_SERVER_URL}/rule/get-rule/intro`)
       .then((d) => {
         setData(d.data);
       })

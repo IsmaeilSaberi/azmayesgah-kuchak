@@ -126,19 +126,19 @@ const BMRchart = ({ cookie }) => {
               بر اساس داده های وارد شده توسط شما که به قرار زیر می باشند:{" "}
             </h2>
             <div className="flex flex-wrap gap-6 bg-[#e5fcde] w-full text-sm rounded p-1">
-              <div className="flex justify-start border-2 border-[#FFB000] p-1 rounded items-center gap-4">
+              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
                 <div>سن:</div>
                 <div>{data.age}</div>
               </div>
-              <div className="flex justify-start border-2 border-[#FFB000] p-1 rounded items-center gap-4">
+              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
                 <div>وزن:</div>
                 <div>{data.weight} کیلوگرم</div>
               </div>
-              <div className="flex justify-start border-2 border-[#FFB000] p-1 rounded items-center gap-4">
+              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
                 <div>قد:</div>
                 <div>{data.height} سانتی متر</div>
               </div>
-              <div className="flex justify-start border-2 border-[#FFB000] p-1 rounded items-center gap-4">
+              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
                 <div>جنسیت:</div>
                 <div>{data.gender == "Male" ? "آقا" : "خانم"}</div>
               </div>
@@ -151,8 +151,8 @@ const BMRchart = ({ cookie }) => {
                 <div
                   className={
                     data.BMI > 18.5 && data.BMI < 25
-                      ? "text-[#7900FF] text-2xl font-bold bg-[#FFB000] p-1 rounded"
-                      : "text-[#9a031e] text-2xl font-bold bg-[#FFB000] p-1 rounded"
+                      ? "text-[#7900FF] text-2xl font-bold bg-[#548CFF] p-1 rounded"
+                      : "text-[#9a031e] text-2xl font-bold bg-[#548CFF] p-1 rounded"
                   }
                 >
                   {data.BMI}
@@ -162,7 +162,7 @@ const BMRchart = ({ cookie }) => {
                 <h3 className="font-bold text-lg">
                   نرخ متابولیک یا سوخت و ساز پایه شما(BMR):{" "}
                 </h3>
-                <div className="text-[#9a031e] text-2xl font-bold bg-[#FFB000] p-1 rounded">
+                <div className="text-[#9a031e] text-2xl font-bold bg-[#548CFF] p-1 rounded">
                   {data.BMR}{" "}
                   <span className="text-sm text-gray-600">کالری</span>
                 </div>
