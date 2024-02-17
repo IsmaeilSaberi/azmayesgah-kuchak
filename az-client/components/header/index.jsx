@@ -23,26 +23,6 @@ const Header = () => {
   const router = useRouter();
 
   const searchRef = useRef();
-  const shopSearcher = (e) => {
-    e.preventDefault();
-    setMenuIsOpen(-1);
-    if (searchRef.current.value.length > 0) {
-      const url = `/shop?keyword=${escape(
-        searchRef.current.value.replace(/\s+/g, "_")
-      )}`;
-      router.push(url);
-      searchRef.current.value = "";
-    } else {
-      toast.error("فرم جستجو خالی است.", {
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-    }
-  };
 
   //FOR RESPONSIVE
   const [menuIsOpen, setMenuIsOpen] = useState(-1);
@@ -56,7 +36,7 @@ const Header = () => {
   }, [menuIsOpen]);
 
   return (
-    <header className="container mx-auto md:border-2 my-2 h-[12vh] md:h-[26vh] relative z-50 text-[#7900FF]">
+    <header className="container mx-auto md:border-[0.1px] border-[#548CFF] rounded my-2 h-[12vh] md:h-[24vh] relative z-50 text-[#7900FF]">
       <div
         className={
           menuIsOpen == -1
@@ -64,7 +44,55 @@ const Header = () => {
             : "flex md:bg-transparent backdrop-blur-3xl w-full h-[100vh] md:h-44 py-1 md:px-2 fixed top-0 bottom-0 right-0 left-0 md:absolute transition-all duration-500"
         }
       >
-        <div className="flex flex-col rounded-sm p-2 md:flex-row justify-start items-center md:items-start gap-8 w-full">
+        <div className="flex flex-col rounded-sm md:flex-row justify-start items-center md:items-center md:justify-between gap-8 w-full">
+          <div className="flex flex-col gap-2 justify-center">
+            <nav className="flex flex-col md:flex-row justify-between items-center w-full">
+              <ul className="flex text-sm flex-col flex-wrap md:flex-row justify-between gap-4 md:gap-2 items-center">
+                <li className="rounded-full  w-52 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
+                  <HeaderUser
+                    setMenuIsOpen={setMenuIsOpen}
+                    displayName={displayName}
+                  />
+                </li>
+                <li className="rounded-full  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
+                  <Link
+                    className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6] "
+                    href={"/"}
+                    onClick={() => setMenuIsOpen(-1)}
+                  >
+                    خانه
+                  </Link>
+                </li>
+                <li className="rounded-full  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
+                  <Link
+                    className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6] "
+                    href={"/account/healthparameters"}
+                    onClick={() => setMenuIsOpen(-1)}
+                  >
+                    آزمایش های من
+                  </Link>
+                </li>
+                <li className="rounded-full  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
+                  <Link
+                    className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6] "
+                    href={"/healthcharts"}
+                    onClick={() => setMenuIsOpen(-1)}
+                  >
+                    آزمایش های آینده
+                  </Link>
+                </li>
+                <li className="rounded-full  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
+                  <Link
+                    className="border-purple-300 border-[0.1rem] h-9 rounded-full px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6] "
+                    href={"/blog"}
+                    onClick={() => setMenuIsOpen(-1)}
+                  >
+                    مقالات
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
           <div
             onClick={() => setMenuIsOpen(-1)}
             className="flex relative items-center gap-2"
@@ -72,13 +100,13 @@ const Header = () => {
             <Link
               href={"/"}
               onClick={() => setMenuIsOpen(-1)}
-              className="logo w-52 z-30 bg-white flex flex-col gap-2 p-2 rounded cursor-pointer transition-all duration-150 hover:shadow-[0px_1px_10px_rgba(0,0,0,0.5)]"
+              className="logo w-52 z-30 bg-white flex flex-col gap-2 p-2 rounded-full border-[0.5px] border-[#7900FF] cursor-pointer transition-all duration-150 hover:shadow-[0px_1px_10px_rgba(0,0,0,0.5)]"
             >
               <div className="flex justify-center items-center">
                 <Image
-                  className="rounded"
-                  width={80}
-                  height={80}
+                  className="rounded-full"
+                  width={100}
+                  height={100}
                   src={"/logo.png"}
                   alt="logo"
                 />
@@ -87,54 +115,6 @@ const Header = () => {
                 آزمایشگاه کوچک من
               </div>
             </Link>
-          </div>
-          <div className="flex flex-col gap-2 justify-center">
-            <nav className="flex flex-col md:flex-row justify-between items-center w-full">
-              <ul className="flex text-sm flex-col flex-wrap md:flex-row justify-between gap-4 md:gap-2 items-center">
-                <li className="rounded  w-52 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
-                  <HeaderUser
-                    setMenuIsOpen={setMenuIsOpen}
-                    displayName={displayName}
-                  />
-                </li>
-                <li className="rounded  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
-                  <Link
-                    className="border-purple-300 border-[0.1rem] h-9 rounded px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6] "
-                    href={"/"}
-                    onClick={() => setMenuIsOpen(-1)}
-                  >
-                    خانه
-                  </Link>
-                </li>
-                <li className="rounded  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
-                  <Link
-                    className="border-purple-300 border-[0.1rem] h-9 rounded px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6] "
-                    href={"/account/healthparameters"}
-                    onClick={() => setMenuIsOpen(-1)}
-                  >
-                    شاخص های سلامتی
-                  </Link>
-                </li>
-                <li className="rounded  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
-                  <Link
-                    className="border-purple-300 border-[0.1rem] h-9 rounded px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6] "
-                    href={"/healthcharts"}
-                    onClick={() => setMenuIsOpen(-1)}
-                  >
-                    نمودارهای سلامتی
-                  </Link>
-                </li>
-                <li className="rounded  w-36 z-40 p-1 border-purple-300 border-[0.1rem] bg-[#7900FF] text-white hover:text-[#b12357]  text-center hover:shadow-gray-300 transition-all duration-200 hover:shadow-xl">
-                  <Link
-                    className="border-purple-300 border-[0.1rem] h-9 rounded px-1 flex justify-center items-center transition-all duration-200 hover:bg-[#9fe2a6] "
-                    href={"/blog"}
-                    onClick={() => setMenuIsOpen(-1)}
-                  >
-                    وبلاگ
-                  </Link>
-                </li>
-              </ul>
-            </nav>
           </div>
         </div>
       </div>

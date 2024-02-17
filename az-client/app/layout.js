@@ -6,8 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 import ContextProvider from "../context/context-provider";
 
 export const metadata = {
-  title: "وعده تندرستی",
-  description: "وعده ی تندرستی و سلامتی شما",
+  title: "آزمایشگاه کوچک من",
+  description: "یک آزمایشگاه با کلی آزمایش جذاب برای بچه ها",
 };
 
 export default function RootLayout({ children }) {
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width ,initial-scale=1" />
         <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
       </header>
-      <body>
+      <body className="bg-[#CFFFDC]">
         <ContextProvider>
           <Header />
           {children}
