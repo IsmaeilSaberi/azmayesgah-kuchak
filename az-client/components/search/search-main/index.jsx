@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 
 import ExperimentsSearch from "../experiments-search";
 
-
 const SearchMainComponent = ({ items }) => {
   const [auth_cookie, setauth_cookie] = useState(Cookies.get("auth_cookie"));
 
@@ -14,8 +13,6 @@ const SearchMainComponent = ({ items }) => {
   useEffect(() => {
     if (items.slug[0] == "experiments") {
       setDetails(<ExperimentsSearch />);
-    } else if (items.slug[0] == "posts") {
-      setDetails(<PostsSearch cookie={auth_cookie} />);
     } else {
       setDetails(<ExperimentsSearch />);
     }

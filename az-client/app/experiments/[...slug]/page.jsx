@@ -9,7 +9,7 @@ import { notFound } from "next/navigation";
 import VideoPlayer from "@/components/video-player";
 import AudioPlayer from "@/components/audio-player";
 import RelatedExperiments from "@/components/related-experiments";
-import RelatedPosts from "@/components/related-posts";
+// import RelatedPosts from "@/components/related-posts";
 import SearchComponent from "@/components/search/search-component";
 import HtmlRender from "@/components/html-render";
 
@@ -174,7 +174,7 @@ const SingleExperiment = async ({ params }) => {
             </div>
             <div className="flex flex-col gap-2 rounded-lg p-3 shadow-[0px_0px_8px_rgba(0,0,0,0.35)]">
               <h3 className="text-indigo-600">مقالات مرتبط</h3>
-              <RelatedPosts related={data.relatedPosts} />
+              {/* <RelatedPosts related={data.relatedPosts} /> */}
             </div>
             <div className="flex flex-col gap-2 rounded-lg p-3 shadow-[0px_0px_8px_rgba(0,0,0,0.35)]">
               <h3 className="text-indigo-600">آزمایش های مرتبط</h3>

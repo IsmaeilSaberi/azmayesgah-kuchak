@@ -3,17 +3,14 @@ import BreadCrumb from "../../../components/bread-crumb";
 import { AiOutlineEye } from "react-icons/ai";
 import { MdDateRange } from "react-icons/md";
 import Link from "next/link";
-import RelatedPosts from "../../../components/sliders/related-posts";
-import MostViewedPosts from "../../../components/most-viewed-posts";
-import SearchBlog from "../../../components/search-blog";
-import CommentsManager from "../../../components/comments-management";
-import CommentsNumber from "../../../components/product-post-comments-number";
+// import RelatedPosts from "../../../components/sliders/related-posts";
+// import SearchBlog from "../../../components/search-blog";
 import { notFound } from "next/navigation";
 import HtmlRender from "@/components/html-render";
 
 const getData = async (slug) => {
   const data = await fetch(
-    `${process.env.NEXT_PUBLIC_SERVER_URL}/api/get-post/${slug}`,
+    `${process.env.NEXT_PUBLIC_SERVER_URL}/post/get-post/${slug}`,
     {
       cache: "no-store",
     }
@@ -24,14 +21,6 @@ const getData = async (slug) => {
   } else {
     return outData;
   }
-};
-
-const getProductsData = async () => {
-  const productsData = await fetch(
-    `${process.env.NEXT_PUBLIC_SERVER_URL}/api/get-most-popular-products`,
-    { cache: "no-store" }
-  );
-  return productsData.json();
 };
 
 const SingleBlog = async ({ params }) => {
@@ -86,7 +75,6 @@ const SingleBlog = async ({ params }) => {
                     <span>تعداد بازدید : </span>
                     <span>{data.pageView}</span>
                   </div>
-                  <CommentsNumber goalId={data._id} />
                   <div className="bg-[#e5fcde] rounded p-2 flex justify-between items-center gap-2">
                     <MdDateRange className="w-6 h-6" />
                     <span>آخرین بروز رسانی : </span>
@@ -99,17 +87,16 @@ const SingleBlog = async ({ params }) => {
                 <HtmlRender htmlContent={data.longDesc} />
               </section>
               <section>
-                <RelatedPosts
+                {/* <RelatedPosts
                   typeOfModel="post"
                   relatedModels={data.relatedPosts}
                   title={"مقالات مرتبط"}
-                />
+                /> */}
               </section>
-              <CommentsManager commentProps={commentProps} />
             </div>
           </main>
           <aside className="mt-8 md:mt-0 w-full md:w-80 md:max-w-80 p-1 rounded bg-zinc-50 flex flex-col gap-8">
-            <SearchBlog />
+            {/* <SearchBlog /> */}
             <div className="flex flex-col gap-2 rounded-lg p-3 shadow-[0px_0px_8px_rgba(0,0,0,0.35)]">
               <h3 className="text-blue-500">توضیحات خلاصه</h3>
               <p className="text-base sm:text-sm text-justify leading-6">
@@ -136,7 +123,6 @@ const SingleBlog = async ({ params }) => {
                 )}
               </div>
             </div>
-            <MostViewedPosts />
             <div className="flex flex-col gap-2 rounded-lg p-3 shadow-[0px_0px_8px_rgba(0,0,0,0.35)]">
               <h3 className="text-blue-500">پرفروش ترین محصولات</h3>
               <ul className="flex flex-col gap-2">
