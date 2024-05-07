@@ -2,6 +2,7 @@ const User = require("../models/User");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const Experiment = require("../models/Experiment");
 
 const getAllUsers = async (req, res) => {
   try {
@@ -61,63 +62,12 @@ const registerUser = async (req, res) => {
             data.password = req.body.password.replace(/\s+/g, "").toLowerCase();
             const hashedPassword = await bcrypt.hash(data.password, 10);
 
-            const BMI = (
-              data.weight /
-              ((data.height / 100) * (data.height / 100))
-            ).toFixed(2);
-
-            let BMR = 1;
-            if (data.gender == "Male") {
-              BMR = (
-                88.362 +
-                13.397 * data.weight +
-                4.799 * data.height -
-                5.677 * data.age
-              ).toFixed(2);
-            } else {
-              BMR = (
-                447.593 +
-                9.247 * data.weight +
-                3.098 * data.height -
-                4.33 * data.age
-              ).toFixed(2);
-            }
-
             const newUser = new User({
               username: data.username,
               email: data.email,
               password: hashedPassword,
               role: "User",
-              gender: data.gender,
-              age: data.age,
-              weightHistory: {
-                weight: data.weight,
-                date: new Date().toLocaleDateString("fa-IR", {
-                  hour: "2-digit",
-                  minute: "2-digit",
-                }),
-              },
-              heightHistory: {
-                height: data.height,
-                date: new Date().toLocaleDateString("fa-IR", {
-                  hour: "2-digit",
-                  minute: "2-digit",
-                }),
-              },
-              bmiHistory: {
-                bmi: BMI,
-                date: new Date().toLocaleDateString("fa-IR", {
-                  hour: "2-digit",
-                  minute: "2-digit",
-                }),
-              },
-              bmrHistory: {
-                bmr: BMR,
-                date: new Date().toLocaleDateString("fa-IR", {
-                  hour: "2-digit",
-                  minute: "2-digit",
-                }),
-              },
+
               viewed: false,
               createdAt: new Date().toLocaleDateString("fa-IR", {
                 hour: "2-digit",
@@ -322,26 +272,13 @@ const getPartOfUserData = async (req, res) => {
         username: 1,
         email: 1,
         role: 1,
-        gender: 1,
-        age: 1,
-        weightHistory: 1,
-        heightHistory: 1,
-        bmiHistory: 1,
-        bmrHistory: 1,
-        createdAt: 1,
         updatedAt: 1,
       });
       res.status(200).json(targetUser);
-    } else if (theSlug == "healthparameters") {
+    } else if (theSlug == "experiments") {
       const targetUser = await User.findById(req.user._id).select({
-        gender: 1,
-        age: 1,
-        weightHistory: 1,
-        heightHistory: 1,
-        bmiHistory: 1,
-        bmrHistory: 1,
-        createdAt: 1,
-        updatedAt: 1,
+        username: 1,
+        experiments: 1,
       });
       res.status(200).json(targetUser);
     } else {
@@ -402,9 +339,11 @@ module.exports.getDisplayname = getDisplayname;
 const getNewItems = async (req, res) => {
   try {
     const newUsers = await User.find({ viewed: false });
+    const newExperiments = await Experiment.find({ viewed: false });
 
     const sendingData = {
       newUsersNumber: newUsers.length,
+      newExperimentsNumber: newExperiments.length,
     };
     res.status(200).json(sendingData);
   } catch (error) {

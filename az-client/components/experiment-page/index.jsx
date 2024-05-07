@@ -35,7 +35,7 @@ const ExperimentPageComponent = ({ url }) => {
   useEffect(() => {
     axios
       .get(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}experiment/search-experiments?${pgn}${pn}${keyword}`
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/experiment/search-experiments?${pgn}${pn}${keyword}`
       )
       .then((d) => {
         setResult(d.data.allExperiments);

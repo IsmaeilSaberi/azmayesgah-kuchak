@@ -8,6 +8,7 @@ import Info from "../info";
 import axios from "axios";
 import { ImProfile } from "react-icons/im";
 import { AiOutlineClose } from "react-icons/ai";
+import Experiments from "../experiments";
 
 const AccountMainComponent = ({ items }) => {
   const router = useRouter();
@@ -47,7 +48,7 @@ const AccountMainComponent = ({ items }) => {
     if (items.slug[0] == "info") {
       setDetails(<Info cookie={auth_cookie} />);
     } else {
-      setDetails(<Info cookie={auth_cookie} />);
+      setDetails(<Experiments cookie={auth_cookie} />);
     }
   }, [items.slug[0]]);
 
@@ -103,11 +104,11 @@ const AccountMainComponent = ({ items }) => {
                     setMenuIsOpen(-1);
                   }}
                   className={
-                    items.slug[0] == "my-experiences"
+                    items.slug[0] == "experiments"
                       ? "rounded-full text-white bg-[#7900FF] transition-none duration-200 hover:bg-indigo-300 hover:text-white flex justify-center items-center w-full h-12"
                       : "rounded-full text-white bg-[#548CFF] transition-none duration-200 hover:bg-indigo-300 hover:text-white flex justify-center items-center w-full h-12"
                   }
-                  href={"/account/my-experiences"}
+                  href={"/account/experiments"}
                 >
                   آزمایش های من
                 </Link>

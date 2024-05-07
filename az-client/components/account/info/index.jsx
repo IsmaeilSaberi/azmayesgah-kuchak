@@ -154,22 +154,6 @@ const Info = ({ cookie }) => {
                 <div>آدرس ایمیل:</div>
                 <div>{data.email}</div>
               </div>
-              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
-                <div>سن:</div>
-                <div>{data.age}</div>
-              </div>
-              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
-                <div>وزن:</div>
-                <div>{data.weightHistory[0].weight} کیلوگرم</div>
-              </div>
-              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
-                <div>قد:</div>
-                <div>{data.heightHistory[0].height} سانتی متر</div>
-              </div>
-              <div className="flex justify-start border-2 border-[#548CFF] p-1 rounded items-center gap-4">
-                <div>جنسیت:</div>
-                <div>{data.gender == "Male" ? "آقا" : "خانم"}</div>
-              </div>
             </div>
             <div className="flex flex-col items-center gap-8 bg-[#e5fcde] w-full text-sm rounded p-4">
               <div>به روز رسانی اطلاعات کاربری</div>

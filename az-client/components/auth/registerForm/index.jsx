@@ -31,10 +31,6 @@ const RegisterForm = () => {
     const formData = {
       username: watch("username"),
       email: watch("email"),
-      gender: watch("gender"),
-      age: watch("age"),
-      weight: watch("weight"),
-      height: watch("height"),
       password: watch("password"),
       rePassword: watch("repassword"),
       comments: [],
@@ -145,119 +141,7 @@ const RegisterForm = () => {
             </div>
           )}
         </div>
-        <div className="flex flex-col gap-1">
-          <div className="flex flex-col gap-2">
-            <div>جنسیت</div>
-            <select
-              {...register("gender")}
-              className="p-2 rounded w-full outline-none border-2 border-zinc-300 focus:border-[#18e52d]"
-            >
-              <option value="Male">مرد</option>
-              <option value="Female">زن</option>
-            </select>
-          </div>
-          {errors.gender && errors.gender.type == "required" && (
-            <div className="text-rose-500 text-sm">
-              لطفا جنسیت را وارد کنید!
-            </div>
-          )}
-        </div>
-        <div className="flex flex-col gap-1">
-          <input
-            type="number"
-            placeholder="سن(به سال)"
-            className="p-2 w-full outline-none border-zinc-400 border-2 rounded focus:border-[#18e52d] "
-            {...register("age", {
-              required: true,
-              min: 1,
-              valueAsNumber: true,
-              pattern: {
-                value: /^(0|[1-9]\d*)(\.\d+)?$/,
-              },
-            })}
-          />
-          {errors.age && errors.age.type == "required" && (
-            <div className="text-rose-500 text-sm">
-              لطفا سن خود را وارد کنید!
-            </div>
-          )}
-          {errors.age && errors.age.type == "min" && (
-            <div className="text-rose-500 text-sm">
-              عدد وزن باید بزرگتر از صفر باشد!
-            </div>
-          )}
-        </div>
-        {/* <div className="flex flex-col gap-1">
-          <div>تاریخ تولد</div>
-          <input
-            type="date"
-            placeholder="سن(به سال)"
-            className="p-2 w-full outline-none border-zinc-400 border-2 rounded focus:border-[#18e52d] "
-            {...register("age", {
-              required: true,
-              min: 1,
-              valueAsNumber: true,
-              pattern: {
-                value: /^(0|[1-9]\d*)(\.\d+)?$/,
-              },
-            })}
-          />
-          {errors.age && errors.age.type == "required" && (
-            <div className="text-rose-500 text-sm">
-              لطفا تاریخ تولد خود را وارد کنید!
-            </div>
-          )}
-        </div> */}
-        <div className="flex flex-col gap-1">
-          <input
-            type="number"
-            placeholder="وزن(به کیلوگرم)"
-            className="p-2 w-full outline-none border-zinc-400 border-2 rounded focus:border-[#18e52d] "
-            {...register("weight", {
-              required: true,
-              min: 1,
-              valueAsNumber: true,
-              pattern: {
-                value: /^(0|[1-9]\d*)(\.\d+)?$/,
-              },
-            })}
-          />
-          {errors.weight && errors.weight.type == "required" && (
-            <div className="text-rose-500 text-sm">
-              لطفا وزن خود را وارد کنید!
-            </div>
-          )}
-          {errors.weight && errors.weight.type == "min" && (
-            <div className="text-rose-500 text-sm">
-              عدد وزن باید بزرگتر از صفر باشد!
-            </div>
-          )}
-        </div>
-        <div className="flex flex-col gap-1">
-          <input
-            type="number"
-            placeholder="قد(به سانتی متر)"
-            className="p-2 w-full outline-none border-zinc-400 border-2 rounded focus:border-[#18e52d] "
-            {...register("height", {
-              required: true,
-              min: 1,
-              valueAsNumber: true,
-              pattern: {
-                value: /^(0|[1-9]\d*)(\.\d+)?$/,
-              },
-            })}
-          />
-          {errors.height && errors.height.type == "required" && (
-            <div className="text-rose-500 text-sm">
-              لطفا قد خود را وارد کنید!
-            </div>
-          )}
-          {errors.heught && errors.heught.type == "min" && (
-            <div className="text-rose-500 text-sm">
-              عدد قد باید بزرگتر از صفر باشد!
-            </div>
-          )}
-        </div>
+
         <div className="flex flex-col gap-1">
           <input
             type="password"

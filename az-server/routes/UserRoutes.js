@@ -9,7 +9,6 @@ const userExist = require("../middlewares/userExist");
 
 // EXPRESS RATE LIMIT
 const rateLimit = require("express-rate-limit");
-const { required } = require("nodemon/lib/config");
 const loginRegisterLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100,

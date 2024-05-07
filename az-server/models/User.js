@@ -20,75 +20,12 @@ const UserSchema = new mongoose.Schema({
     enum: ["User", "TopAdmin", "Admin"],
     default: "User",
   },
-  gender: {
-    type: String,
+  experiments: {
     required: true,
-    enum: ["Male", "Female"],
+    type: Array,
+    default: [],
   },
-  age: {
-    required: true,
-    type: Number,
-  },
-  heightHistory: [
-    {
-      height: {
-        type: Number,
-        required: true,
-      },
-      date: {
-        type: String,
-        default: new Date().toLocaleDateString("fa-IR", {
-          hour: "2-digit",
-          minute: "2-digit",
-        }),
-      },
-    },
-  ],
-  weightHistory: [
-    {
-      weight: {
-        type: Number,
-        required: true,
-      },
-      date: {
-        type: String,
-        default: new Date().toLocaleDateString("fa-IR", {
-          hour: "2-digit",
-          minute: "2-digit",
-        }),
-      },
-    },
-  ],
-  bmrHistory: [
-    {
-      bmr: {
-        type: Number,
-        required: true,
-      },
-      date: {
-        type: String,
-        default: new Date().toLocaleDateString("fa-IR", {
-          hour: "2-digit",
-          minute: "2-digit",
-        }),
-      },
-    },
-  ],
-  bmiHistory: [
-    {
-      date: {
-        type: String,
-        default: new Date().toLocaleDateString("fa-IR", {
-          hour: "2-digit",
-          minute: "2-digit",
-        }),
-      },
-      bmi: {
-        type: Number,
-        required: true,
-      },
-    },
-  ],
+
   viewed: {
     required: true,
     type: Boolean,

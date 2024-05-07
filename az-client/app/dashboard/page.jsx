@@ -1,4 +1,5 @@
 // import MainDashboard from "../../components/dashboard/main-dashboard";
+import MainDashboard from "@/components/dashboard/main-dashboard";
 import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 
@@ -37,8 +38,7 @@ const Page = async () => {
         <link rel="canonical" href="http://localhost:3000/dashboard" />
       </>
       <div className="container mx-auto flex justify-center items-center">
-        داشبورد
-        {/* <MainDashboard /> */}
+        <MainDashboard />
       </div>
     </div>
   );
